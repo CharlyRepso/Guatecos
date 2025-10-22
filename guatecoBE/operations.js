@@ -8,8 +8,8 @@ function executeQuery(ReadQuery, values, callback) {
     var connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '1234',
-        database: 'guateco_data',
+        password: '12345',
+        database: 'GUATECO_DATA',
     });
     
     connection.connect((error) => {
