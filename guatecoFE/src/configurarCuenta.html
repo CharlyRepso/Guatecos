@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="css/configurarCuenta.css">
+<script src="js/configurarCuenta.js"></script>
+
+<div class="card" id="card_principal">
+    <div class="card-body">
+        <div class="row space d-grid mx-auto text-center">
+            <div class="alert alert-success" role="alert">
+                <h4><i class='bx bxs-cog' ></i>&nbsp;Datos Personales</h4>
+            </div>
+        </div>
+        <form id="form_data">
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="input_firstName" name="firstName" placeholder="Nombres" required>
+                        <label for="input_firstName"><i class='bx bxs-user-rectangle'></i>&nbsp;Nombres</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="input_lastName" name="lastName"  placeholder="Apellidos" required>
+                      <label for="input_lastName"><i class='bx bxs-user-rectangle'></i>&nbsp;Apellidos</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="input_userName" name="userName" placeholder="Nombre de usuario" required>
+                        <label for="input_userName"><i class='bx bxs-user-circle' ></i>&nbsp;Nombre de usuario</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="input_address" name="address" placeholder="Direccion" required>
+                        <label for="input_address"><i class='bx bxs-building-house' ></i>&nbsp;Direccion</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="input_email" name="email" placeholder="Correo Electronico" required>
+                        <label for="input_email"><i class='bx bxs-envelope' ></i>&nbsp;Correo Electronico</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="input_phone" name="phone" placeholder="Telefono" required>
+                        <label for="input_phone"><i class='bx bxs-building-house' ></i>&nbsp;Telefono</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row space d-grid col-3 mx-auto">
+                <button type="submit" class="btn btn-success " id="save_chages">
+                    <table class="mx-auto" style="color: white;">
+                        <tbody>
+                            <tr>
+                            <td><i class='bx bxs-save bx-md'></i>&nbsp;&nbsp;</td>
+                            <td>Actualizar Datos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </button>
+            </div>
+        </form>
+        <div class="row space d-grid mx-auto text-center">
+            <div class="alert alert-primary" role="alert">
+                <h4><i class='bx bxs-lock'></i>&nbsp;Actualizar Contraseña</h4>
+            </div>
+        </div>
+        <form id="form_password">
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="input_oldPassword" name="oldPassword" placeholder="Contraseña Actual" required>
+                        <label for="input_oldPassword"><i class='bx bxs-lock-alt'></i>&nbsp;Contraseña Actual</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="input_newPassword" name="newPassword" placeholder="Nueva Contraseña">
+                      <label for="input_newPassword" required><i class='bx bxs-lock-open'></i>&nbsp;Nueva Contraseña</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="input_repeatPassword" name="repeatPassword" placeholder="Repetir Contraseña" required>
+                        <label for="input_repeatPassword"><i class='bx bxs-lock'></i>&nbsp;Repetir Contraseña</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row space d-grid col-3 mx-auto">
+                <button type="submit" class="btn btn-primary" id="save_password">
+                    <table class="mx-auto" style="color: white;">
+                        <tbody>
+                            <tr>
+                            <td><i class='bx bx-sync bx-md'></i></td>
+                            <td>Actualizar Contraseña</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

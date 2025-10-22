@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url('img/IMAGEN1.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* La imagen de fondo no se desplazará con el scroll */
+    font-family: "Century Gothic", sans-serif;
+}
+
+.image-container {
+    height: 100vh; /* La imagen ocupa toda la altura de la pantalla */
+    overflow: hidden; /* Para que el contenido debajo no sea visible inicialmente */
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Se ajusta proporcionalmente a la anchura */
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para que se vea la imagen de fondo */
+    padding: 20px;
+    margin-top: 50vh; /* Empuja hacia abajo el contenido, dejando espacio para la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh; /* Ajusta la altura para centrar el contenido */
+}
+.informacion {
+    text-align: center; /* Centra el texto horizontalmente */
+    cursor: pointer; 
+}
+.mision-vision-container {
+    display: flex;
+    justify-content: space-around; /* Espacio uniforme entre las imágenes */
+    margin-top: 20px; /* Espacio entre la información y las imágenes */
+}
+
+.mision-vision-container img {
+    width: 45%; /* Ajusta el ancho de las imágenes */
+    height: auto;
+}
+
+.mision-vision-container .info {
+    width: 45%; /* Ajusta el ancho del contenido de misión y visión */
+    text-align: center; /* Centra el texto horizontalmente */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.infor{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}

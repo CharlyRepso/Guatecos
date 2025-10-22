@@ -1,0 +1,37 @@
+.swiper {
+    width: 20rem;
+    height: 20rem;
+    
+  }
+
+.img {
+
+    width: 100%; /* Ajusta el ancho para que ocupe todo el contenedor */
+    height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
+    object-fit: cover; /* Mantiene la proporción de aspecto y recorta la imagen para que llene el espacio */
+}
+.col-md-4.mb-4 {
+    margin-bottom: 20px; /* Ajusta el valor según lo desees */
+}
+.card-body {
+    margin: 10px; /* Ajusta el valor según lo desees */
+}
+.card-deck {
+    padding: 10px; /* Ajusta el valor según lo desees */
+}
+.card {
+    margin: 10px; /* Ajusta el valor según lo desees */
+}
+
+/* O bien, si solo quieres aplicar márgenes al cuerpo de la tarjeta */
+.card-body {
+    margin: 10px; /* Ajusta el valor según lo desees */
+}
+
+p, h5, .btn, .title_buy, .form-floating, h2 {
+    font-family: "Century Gothic", sans-serif;
+}
+
+.title_buy{
+    margin-top: 25px;
+}

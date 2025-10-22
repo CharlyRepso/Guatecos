@@ -1,0 +1,40 @@
+.swiper {
+    width: 19rem;
+    height: 19rem;
+  }
+
+.img {
+
+    width: 100%; /* Ajusta el ancho para que ocupe todo el contenedor */
+    height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
+    object-fit: cover; /* Mantiene la proporción de aspecto y recorta la imagen para que llene el espacio */
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+#Barrita span {
+  display: inline;
+  text-align: center; /* Centra el contenido del span horizontalmente */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho del span */
+  padding: 5px; /* Agrega relleno opcional para espaciar los span */
+}
+
+h4,h5,h6,small, input, label, .btn, p, li, textarea{
+  font-family: "Century Gothic", sans-serif;
+}
+
+#lg_modal_content{
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+i{
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Cambia los valores según tus preferencias */
+  width: 50rem;
+}

@@ -1,0 +1,40 @@
+h5, input, label, .btn, p, li, .form-floating, .input-group{
+    font-family: "Century Gothic", sans-serif;
+}
+
+.space{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card{
+    margin-top: 8%;
+}
+
+#prev_images{
+    border-style: dashed;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+.errorEmpty{
+    border: 2px solid red; /* Cambia "red" al color que desees */
+    outline: none; /* Esto elimina el resaltado predeterminado al hacer clic en el input */
+}
+
+.max-width-100 {
+    padding: 10px;
+    max-width: auto;
+    height: 225px;
+}
+
+.logo_pre{
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.img-fluid{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

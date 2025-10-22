@@ -1,0 +1,20 @@
+.title {
+  padding: 10px;
+}
+
+.img {
+  width: 100%; /* Ajusta el ancho para que ocupe todo el contenedor */
+  height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
+  object-fit: cover; /* Mantiene la proporción de aspecto y recorta la imagen para que llene el espacio */
+}
+
+.swiper {
+  width: 20rem;
+  height: 20rem;
+}
+
+.abrir-modal {
+  margin-left: .8rem;
+  margin-bottom: .8rem;
+  width: 10rem;
+}

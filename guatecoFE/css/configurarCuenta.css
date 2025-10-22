@@ -1,0 +1,14 @@
+#principal_dom{
+    width: 100%; height:100%;
+}
+#card_principal{
+    width:100%;
+}
+
+h4, input, label, .btn, p, li, textarea{
+    font-family: "Century Gothic", sans-serif;
+}
+.space{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+#principal_dom{
+    width: 100%; height:100%;
+}
+p, li{
+    text-align: justify
+}
+
+h5, input, label, .btn, p, li, textarea{
+    font-family: "Century Gothic", sans-serif;
+}
+
+#lg_modal_content{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.card {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Cambia los valores según tus preferencias */
+    width: 50rem;
+}
+
+#InputAddress{
+    height: 100px;
+    resize: none;
+}
+
+.errorEmpty{
+    border: 2px solid red; /* Cambia "red" al color que desees */
+    outline: none; /* Esto elimina el resaltado predeterminado al hacer clic en el input */
+}

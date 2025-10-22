@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="css/empeno.css">
+<script src="js/empeno.js"></script>
+<form id="form_newArticulA">
+    <div class="card">
+        <div class="card-header text-center">
+            <h5>Empeñar Articulo - Formulario de Solicitud</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <form id="form_sol_emp">
+                        <div class="row">
+                            <div class="col-12 space">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="input_titulo" name="titulo" maxlength="200" required>
+                                    <label for="input_titulo">Titulo del Empeño</label>
+                                </div>
+                            </div>
+                            <div class="col-6 space">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select_tipo_art" name="tipo_art" required>
+                                        <option selected disabled value=''>...</option>
+                                    </select>
+                                    <label for="select_tipo_art">Tipo de Arituclo</label>
+                                </div>
+                            </div>
+                            <div class="col-6 space">
+                                <div class="form-floating">
+                                    <select class="form-select" name="ponderacion" required>
+                                        <option selected disabled value=''>...</option>
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                        <option value='4'>4</option>
+                                        <option value='5'>5</option>
+                                        <option value='6'>6</option>
+                                        <option value='7'>7</option>
+                                        <option value='8'>8</option>
+                                        <option value='9'>9</option>
+                                        <option value='10'>10</option>
+                                    </select>
+                                    <label for="input_ponderacion">Ponderacion 1-10</label>
+                                </div>
+                            </div>
+                            <div class="col-12 space">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="input_descripcion" name="descripcion" style="height: 100px; resize: none;" maxlength="400" required></textarea>
+                                    <label for="input_descripcion">Descripcion</label>
+                                </div>
+                            </div>
+                            <div class="col-6 space">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control " id="input_precio" name="precio" required>
+                                    <label for="input_precio">Precio Q.</label>
+                                </div>
+                            </div>
+                            <div class="col-6 space">
+                                <div class="form-floating">
+                                    <select class="form-select in_sol" id="select_tipo_cuota" name="cuota" required>
+                                        <option selected disabled value=''>...</option>
+                                    </select>
+                                    <label for="select_tipo_art">Cantidad de Cuotas</label>
+                                </div>
+                            </div>
+                            <div class="col-4 space">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="label_interes">Interes Q.</span>
+                                    <input type="text" class="form-control"  id ="txt_interes" aria-describedby="label_interes" disabled>
+                                </div>
+                            </div>
+                            <div class="col-4 space">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="label_total">Total Q.</span>
+                                    <input type="text" class="form-control"  id ="txt_total" aria-describedby="label_total" disabled>
+                                </div>
+                            </div>
+                            <div class="col-4 space">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="label_mes">Cuota Q.</span>
+                                    <input type="text" class="form-control"  id ="txt_mes" name="valor_cuota" aria-describedby="label_mes" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="input_images">Subir Fotos &nbsp; <i class='bx bx-cloud-upload' ></i></label>
+                                <input type="file" class="form-control" id="input_images" name="photos" multiple accept="image/*" required>
+                              </div>
+                        </div>
+                        <div class="col-12 container">
+                            <div class="row" id="prev_images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary" id ="btn_send">
+                Enviar Solicitud &nbsp; <i class='bx bx-send'></i>
+            </button>
+        </div>
+    </div>
+</form>

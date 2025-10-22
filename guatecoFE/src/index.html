@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>GUATECOS, S.A</title>
+    <link rel="stylesheet" href="plugins/bootstrap-5.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="plugins/DataTables-1.13.6/query.dataTables.min.css">
+    <link rel='stylesheet' href='plugins/boxicons/boxicons.min.css'>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#">
+
+  </head>
+  <header class="header" id="header">
+    <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    <div> <img src="img/guatecosLogo.png" style="height: 50px;"> </div>
+    <div id="info_user">
+    </div>
+  </header>
+  
+  <body className='snippet-body'>
+    <body id="body-pd">
+      <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+          <div>
+            <a href="#" class="nav_logo nav_link" page="14"><i class='bx bx-money nav_logo-icon'></i><span class="nav_logo-name">GUATECOS</span></a>
+            <div class="nav_list" id='set_menu'>
+              <!--OPCIONES DE AREAS--->
+            </div>
+          </div> 
+          <!--FOOTER SLIDE-BAR-->
+          <div id="log_out">
+          </div>
+        </nav>
+      </div>
+      
+      <!--Container Main start-->
+
+      <div class="" id="principal_dom">
+
+        
+      </div>
+      <!--Container Main end-->
+      <script type='text/javascript'>document.addEventListener("DOMContentLoaded", function(event) {
+          const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+            const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId),
+            bodypd = document.getElementById(bodyId),
+            headerpd = document.getElementById(headerId)
+
+              // Validate that all variables exist
+              if(toggle && nav && bodypd && headerpd){
+                toggle.addEventListener('click', ()=>{
+                // show navbar
+                nav.classList.toggle('show_2')
+                // change icon
+                toggle.classList.toggle('bx-x')
+                // add padding to body
+                bodypd.classList.toggle('body-pd')
+                // add padding to header
+                headerpd.classList.toggle('body-pd')
+              })
+            }
+          }
+
+          showNavbar('header-toggle','nav-bar','body-pd','header');
+
+          /*===== LINK ACTIVE =====*/
+          const linkColor = document.querySelectorAll('.nav_link')
+
+          function colorLink(){
+            if(linkColor){
+              linkColor.forEach(l=> l.classList.remove('active'))
+              this.classList.add('active')
+            }
+          }
+        });
+        </script>
+
+        <script type='text/javascript'>/*var myLink = document.querySelector('a[href="#"]');
+        myLink.addEventListener('click', function(e) {
+        e.preventDefault();
+      });*/
+      </script>
+      <script type="text/javascript" src="plugins/jquery/jquery-3.7.0.min.js"></script>
+      <script type="text/javascript" src="plugins/bootstrap-5.3.1/js/popper.min.js"></script>
+      <script type="text/javascript" src="plugins/bootstrap-5.3.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="plugins/swiper/swiper-bundle.min.js"></script>
+      <script type="text/javascript" src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+      <script type="text/javascript" src="plugins/DataTables-1.13.6/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </body>
+    
+    <!--MODALES GENERALES-->
+    <!-- GENERIC MODAL SM-->
+    <div class="modal fade" id="sm_modal" tabindex="-1" role="dialog" aria-labelledby="sm_modal_title" aria-modal="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sm_modal_title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body size-limit" id="sm_modal_content"></div>
+          <div class="modal-footer" id="sm_modal_footer">
+             <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+          </div>
+        </div>
+      </div>
+    </div>	
+    <!-- GENERIC MODAL LG-->
+    <div class="modal fade" id="lg_modal" tabindex="-1" role="dialog" aria-labelledby="lg_modal_title" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="lg_modal_title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body size-limit" id="lg_modal_content">
+          </div>
+          <div class="modal-footer" id="lg_modal_footer">
+             <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+          </div>
+        </div>
+      </div>
+    </div>			
+    <!-- GENERIC MODAL XL-->
+    <div class="modal fade" id="xl_modal" tabindex="-1" role="dialog" aria-labelledby="xl_modal_title" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="xl_modal_title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="xl_modal_content">
+
+
+
+          </div>
+          <div class="modal-footer" id="xl_modal_footer">
+            <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+          </div>
+        </div>
+      </div>
+    </div>	
+  </body>
+</html>

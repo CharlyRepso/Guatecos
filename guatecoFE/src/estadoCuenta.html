@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="css/estadoCuenta.css" />
+<script src="js/estadoCuenta.js"></script>
+
+<div class="row">
+  <div class="col" id="header_">
+    <div class="alert alert-info text-center" role="alert">
+      <h4>Estado de Cuenta</h4>
+    </div>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="col-9">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <h5 class="text-center">
+          <span class="badge text-bg-primary"
+            ><i class="bx bxs-face-mask bx-sm"></i>&nbsp;&nbsp;&nbsp;Estados de Cuenta de los empeños
+          </span>
+        </h5>
+      </div>
+      <div class="card-body">
+        <table class="table table table-hover">
+          <thead class="text-center table-dark">
+            <tr>
+              <td>Fecha de pago</td>
+              <td>Fecha de vencimiento</td>
+              <td>No. documento</td>
+              <td>Estado del Pago</td>
+              <td>Acciones</td>
+            </tr>
+          </thead>
+          <tbody id="table_consulta_pagos"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

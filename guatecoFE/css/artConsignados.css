@@ -1,0 +1,48 @@
+h4, h5, h6, td, .form-floating, .btn, .input-group{
+    font-family: "Century Gothic", sans-serif;
+}
+
+#header_{
+    margin-top: 25px;
+    font-style: oblique;
+    font-weight: 200;
+}
+
+.bx-x1{
+    font-size:1rem
+}
+.bx-x2{
+    font-size:2rem
+}
+.bx-x3{
+    font-size:3rem
+}
+.bx-x4{
+    font-size:4rem
+}
+.bx-x5{
+    font-size:5rem
+}
+
+th{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: normal;
+}
+
+#descripcion{
+    height: 140px;
+    resize: none;
+}
+
+.swiper {
+    width: 19rem;
+    height: 25rem;
+  }
+
+.img {
+    width: 100%; /* Ajusta el ancho para que ocupe todo el contenedor */
+    height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
+    object-fit: contain; /* Mantiene la proporción de aspecto y recorta la imagen para que llene el espacio */
+}
+
+
