@@ -9,12 +9,12 @@ $.ajax({
     data: {op: 1},
     success: function(data) {
         console.log(data);
-        /*$("#input_firstName").val(data[0].nombre);
+        $("#input_firstName").val(data[0].nombre);
         $("#input_lastName").val(data[0].apellido);
         $("#input_userName").val(data[0].userName);
         $("#input_address").val(data[0].direccion);
         $("#input_email").val(data[0].correo);
-        $("#input_phone").val(data[0].telefono);*/
+        $("#input_phone").val(data[0].telefono);
     },
     error: function(error) {
         console.error('Error en la solicitud AJAX:', error);

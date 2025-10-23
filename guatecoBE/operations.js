@@ -8,7 +8,7 @@ function executeQuery(ReadQuery, values, callback) {
     var connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '12345',
+        password: 'S3cr3t0@.',
         database: 'GUATECO_DATA',
     });
     
