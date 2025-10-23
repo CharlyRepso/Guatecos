@@ -153,11 +153,11 @@ CREATE TABLE compra(
   estado INT
 );
 
-ALTER TABLE pago_venta ADD CONSTRAINT FKTPPAVE FOREIGN KEY (fkTipoPago) REFERENCES tipopago (idTipoPago);
+ALTER TABLE pago_venta ADD CONSTRAINT FKTPPAVE FOREIGN KEY (fkTipoPago) REFERENCES TipoPago (idTipoPago);
 ALTER TABLE pago_venta ADD CONSTRAINT FKCOPAVE FOREIGN KEY (fkCompra) REFERENCES compra (idCompra);
 
 ALTER TABLE venta ADD CONSTRAINT FKARTVEN FOREIGN KEY (fkArticulo) REFERENCES articulo (idArticulo);
-ALTER TABLE venta ADD CONSTRAINT FKARTEST FOREIGN KEY (estado) REFERENCES estado (idEstado);
+ALTER TABLE venta ADD CONSTRAINT FKARTEST FOREIGN KEY (estado) REFERENCES Estado (idEstado);
 
 ALTER TABLE compra ADD CONSTRAINT FKCOMUSER FOREIGN KEY (fkUsuario) REFERENCES usuario (idUser);
 ALTER TABLE compra ADD CONSTRAINT FKCOMSALE FOREIGN KEY (fkVenta) REFERENCES venta (idVenta);
@@ -176,12 +176,12 @@ ALTER TABLE Pago ADD CONSTRAINT FK_PAG_TPA FOREIGN KEY (fkTipoPago) REFERENCES T
 
 
 ALTER TABLE usuario ADD INDEX idx_userName (userName);
-ALTER TABLE usuario ADD CONSTRAINT FK_EMP_TUS FOREIGN KEY (fkTipoUsuario) REFERENCES tipoUsuario(idTipoUsuario);
-ALTER TABLE asignarPermiso ADD CONSTRAINT FK_PER_TUS FOREIGN KEY (fkTipoUsuario) REFERENCES tipoUsuario(idTipoUsuario);
+ALTER TABLE usuario ADD CONSTRAINT FK_EMP_TUS FOREIGN KEY (fkTipoUsuario) REFERENCES TipoUsuario(idTipoUsuario);
+ALTER TABLE asignarPermiso ADD CONSTRAINT FK_PER_TUS FOREIGN KEY (fkTipoUsuario) REFERENCES TipoUsuario(idTipoUsuario);
 ALTER TABLE asignarPermiso ADD CONSTRAINT FK_PER_MENU FOREIGN KEY (fkMenu) REFERENCES menu (idMenu);
 ALTER TABLE pagina ADD CONSTRAINT FK_PAG_MENU FOREIGN KEY (fkMenu) REFERENCES menu (idMenu);
 
-INSERT INTO tipoarticulo (descripcion) 
+INSERT INTO TipoArticulo (descripcion) 
 VALUES 
 ('Autos'),
 ('Motos'),
@@ -198,7 +198,7 @@ VALUES
 ('Consolas de videojuegos');
 
 
-INSERT INTO tipopago (descripcion)
+INSERT INTO TipoPago (descripcion)
 VALUES
 ('Deposito'),
 ('Transferencia'),
@@ -208,31 +208,31 @@ INSERT INTO tipopago (descripcion)
 VALUES
 ('Ninguno');
 
-INSERT INTO tipousuario (nombre)
+INSERT INTO TipoUsuario (nombre)
 VALUES
 ('FREE_USER'),
 ('NORMAL_USER'),
 ('ADMIN_USER');
 
-INSERT INTO MENU (idMenu,NOMBRE, DESCRIPCION) VALUES
+INSERT INTO Menu (idMenu,NOMBRE, DESCRIPCION) VALUES
 (1, "FREE","Menu, abierto al publico. sin logeo"),
 (2, "USER","Menu, usuarios normales, con logeo"),
 (3, "ADMIN","Menu, administradores del sitio, con logueo");
 
-INSERT INTO asignarpermiso (fkTipoUsuario, fkMenu, estado)
+INSERT INTO AsignarPermiso (fkTipoUsuario, fkMenu, estado)
 VALUES
 (1, 1, 1),
 (2, 2, 1),
 (3, 3, 1);
 
 -- INSERTS PAGINAS DE NIVEL 1 FREE
-INSERT INTO PAGINA (`fkMenu`, descripcion, path, icono)
+INSERT INTO Pagina (`fkMenu`, descripcion, path, icono)
 VALUES
 (1, 'Login', 'login.html', 'bx bx-log-in' ),
 (1, 'Registrarse', 'registro.html', 'bx bxs-user-plus');
 
 -- INSERTS PAGINAS DE NIVEL 2 USER
-INSERT INTO PAGINA (`fkMenu`, descripcion, path, icono)
+INSERT INTO Pagina (`fkMenu`, descripcion, path, icono)
 VALUES
 (2, 'Empeños', 'empeno.html', 'bx bx-dollar-circle'),
 (2, 'Compras', 'compras.html', 'bx bxs-shopping-bags' ),
@@ -241,7 +241,7 @@ VALUES
 
 -- INSERTS PAGINAS DE NIVEL 3 ADMIN
 
-INSERT INTO PAGINA (`fkMenu`, descripcion, path, icono)
+INSERT INTO Pagina (`fkMenu`, descripcion, path, icono)
 VALUES
 (3, 'Peticiones', 'peticiones.html', 'bx bxs-inbox'),
 (3, 'Art. Empeñados', 'artEmpenos.html', 'bx bxs-shopping-bags' ),
@@ -249,19 +249,19 @@ VALUES
 (3, 'Metricas', 'metricas.html', 'bx bx-chart'),
 (3, 'Registrar', 'registrar.html', 'bx bxs-user-plus');
 
-INSERT INTO PAGINA (`fkMenu`, descripcion, path, icono, estado)
+INSERT INTO Pagina (`fkMenu`, descripcion, path, icono, estado)
 VALUES
 (1, 'GUATECOS', 'dashboard.html', 'bx bx-money',2),
 (2, 'GUATECOS', 'dashboard.html', 'bx bx-money',2),
 (3, 'GUATECOS', 'dashboard.html', 'bx bx-money',2);
 
-INSERT INTO PAGINA (`fkMenu`, descripcion, path, icono, estado)
+INSERT INTO Pagina (`fkMenu`, descripcion, path, icono, estado)
 VALUES
 (2, 'Configurar Cuenta', 'configurarCuenta.html', 'bx bxs-cog',2),
 (3, 'Configurar Cuenta', 'configurarCuenta.html', 'bx bxs-cog',2);
 
 
-INSERT INTO estado (idEstado, nombre, descripcion) VALUES
+INSERT INTO Estado (idEstado, nombre, descripcion) VALUES
 (1, 'Postulado', 'Empeño pendiente de aprobación o negocionación'),
 (2, 'Negociación', 'Empeño, en estado de aceptación por parte del usuario'),
 (3, 'Aceptado', 'Negociacion por empeño aceptado por ambas partes'),
@@ -287,7 +287,7 @@ INSERT INTO estado (idEstado, nombre, descripcion) VALUES
 (23, 'No autorizado', 'Pago no autorizado, o invalidado por datos falsos.'),
 (24, 'Verficado', 'Pago en periodo de verificación');
 
-INSERT INTO cuota (meses, rangoMin, interes, estado) 
+INSERT INTO Cuota (meses, rangoMin, interes, estado) 
 VALUES
 (10, 500, 0.05, 1),
 (12, 3000, 0.06, 1),
