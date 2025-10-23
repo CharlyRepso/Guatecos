@@ -13,10 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 3. Instalar dependencias y correr pruebas
-      - name: Instalar dependencias
-        run: npm ci
-
       - name: Ejecutar pruebas
         run: npm test || echo "No hay pruebas configuradas"
 
