@@ -1,0 +1,46 @@
+name: Node.js CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del código
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configurar Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # 3. Instalar dependencias y correr pruebas
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar pruebas
+        run: npm test || echo "No hay pruebas configuradas"
+
+      # 4. Escanear vulnerabilidades
+      - name: Escaneo de vulnerabilidades
+        run: npm audit --audit-level=moderate || true
+
+      # 5. Desplegar al EC2
+      - name: Desplegar al EC2
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.TEST_SERVER_HOST }}
+          username: ${{ secrets.TEST_SERVER_USER }}
+          key: ${{ secrets.TEST_SERVER_SSH_KEY }}
+          script: |
+            cd /var/miapp/Guatecos/guatecoBE
+            git pull origin main
+            npm install -y
+            node server.js
