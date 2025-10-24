@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.TEST_SERVER_USER }}
           key: ${{ secrets.TEST_SERVER_SSH_KEY }}
           script: |
+            git pull
             cd /var/miapp/Guatecos/guatecoBE
-            git pull origin main
             npm install -y
-            systemctl restart guateco
+            sudo systemctl restart guateco
