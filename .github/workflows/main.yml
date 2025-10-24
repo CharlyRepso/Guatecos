@@ -32,4 +32,4 @@ jobs:
             cd /var/miapp/Guatecos/guatecoBE
             git pull origin main
             npm install -y
-            node server.js
+            systemctl restart guateco
